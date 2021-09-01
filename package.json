@@ -17,7 +17,7 @@
     "node",
     "nodejs"
   ],
-  "author": "Shaun VanWeelden",
+  "author": "David Gasperoni <mcdado@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mcdado/node-helpscout/issues"

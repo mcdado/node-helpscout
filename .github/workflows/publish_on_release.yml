@@ -1,4 +1,4 @@
-name: publish node-helpscout to npm
+name: publish node package to npm and github
 on:
   release:
     types: [created]
