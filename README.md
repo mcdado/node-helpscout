@@ -1,5 +1,7 @@
 # Help Scout Mailbox API 2.0 Client - Node.js
 
+![example workflow](https://github.com/mcdado/node-helpscout/actions/workflows/publish_on_release.yml/badge.svg)
+
 ## About this Module
 
 This module was built to make using the [Help Scout Mailbox API 2.0](https://developer.helpscout.com/mailbox-api/)
