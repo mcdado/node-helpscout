@@ -1,8 +1,11 @@
 {
   "name": "node-helpscout",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "Simple wrapper class to access HelpScout's Mailbox API 2.0; handles Client Credentials Flow authentication",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
