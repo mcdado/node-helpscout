@@ -256,7 +256,7 @@ const authenticate = async function (appCreds) {
 const getNewAccessToken = async function (appCreds) {
   // Get access token for the first time and callback
   const res = await axios({
-    url: 'https://api.helpscout.net/v2/oauth2/token',
+    url: BASE_URL + 'oauth2/token',
     method: 'POST',
     params: {
       grant_type: 'client_credentials',
