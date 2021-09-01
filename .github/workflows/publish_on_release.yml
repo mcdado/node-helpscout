@@ -1,4 +1,4 @@
-name: publish node package to npm and github
+name: publish node package to npm
 on:
   release:
     types: [created]

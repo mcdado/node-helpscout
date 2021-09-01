@@ -1,6 +1,6 @@
 # Help Scout Mailbox API 2.0 Client - Node.js
 
-[![publish node package to npm and github](https://github.com/mcdado/node-helpscout/actions/workflows/publish_on_release.yml/badge.svg)](https://github.com/mcdado/node-helpscout/actions/workflows/publish_on_release.yml)
+[![publish node package to npm](https://github.com/mcdado/node-helpscout/actions/workflows/publish_on_release.yml/badge.svg)](https://github.com/mcdado/node-helpscout/actions/workflows/publish_on_release.yml)
 
 ## About this Module
 
