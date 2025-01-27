@@ -35,9 +35,9 @@ App Id and Secret provided to authenticate your API Calls.
 It may look something like this when you're done:
 
 ```js
-var HelpScout = require("node-helpscout");
+const HelpScout = require("node-helpscout");
 
-var HelpScoutClient = new HelpScout({
+const HelpScoutClient = new HelpScout({
     clientId: "26d567febd264ec8b7845a4adfXXXXXX",
     clientSecret: process.env.HELPSCOUT_APP_SECRET,
 });
@@ -102,13 +102,13 @@ HelpScoutClient.create(
 **Example 1: Create a new Customer**
 
 ```js
-var customer = {
+const customer = {
     firstName: "TestFirst",
     lastName: "TestLast",
     emails: [{ type: "work", value: "test1234@gmail.com" }],
 };
 
-let customerId = await HelpScoutClient.create("customers", customer);
+const customerId = await HelpScoutClient.create("customers", customer);
 
 HelpScoutClient.create(
     "customers",
@@ -168,7 +168,7 @@ will be passed to the function.
 **Example 1: Get all Mailboxes**
 
 ```js
-let mailboxArr = await HelpScoutClient.list("mailboxes");
+const mailboxArr = await HelpScoutClient.list("mailboxes");
 ```
 
 **Example 2: Get all Customers**
@@ -233,7 +233,7 @@ HelpScoutClient.get(
 **Example 2: Get Folders in a Mailbox**
 
 ```js
-let folderArr = await HelpScoutClient.get("mailboxes", 166129, "", "folders");
+const foldersArr = await HelpScoutClient.get("mailboxes", 166129, "", "folders");
 ```
 
 ## updatePut();
@@ -383,7 +383,7 @@ The Access Token object has the following properties:
 
 ## rawApi();
 
-If you want to leverage the authentication that comes with the client, but need to query something super specific or not covered by this Module, this method is for you. It'll submit the request and make the callbacks on your behalf.
+If you want to leverage the authentication that comes with the client, but need to query something super specific or not covered by this module, this method is for you. It'll submit the request and make the callbacks on your behalf.
 
 ```js
 HelpScoutClient.rawApi(method, url, data, error_callback, callback);
