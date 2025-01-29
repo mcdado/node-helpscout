@@ -32,7 +32,7 @@ export default class HelpScoutClient {
     });
 
     this.httpClient.interceptors.request.use(async (config) => {
-      this.apiTokens != null &&
+      this.apiTokens !== undefined &&
         (config.headers.Authorization = `Bearer ${this.apiTokens.accessToken}`);
       return config;
     });
@@ -44,13 +44,13 @@ export default class HelpScoutClient {
           return await Promise.reject(error);
         }
 
-        if (error.config != null && error.response?.status === 401) {
+        if (error.config && error.response?.status === 401) {
           this.apiTokens = undefined;
           await this.authenticate();
           return await axios.request(error.config);
         }
 
-        if (error.config != null && error.response?.status === 429) {
+        if (error.config && error.response?.status === 429) {
           await new Promise((resolve) =>
             setTimeout(resolve, this.options.rateLimit)
           );
@@ -63,7 +63,10 @@ export default class HelpScoutClient {
   }
 
   async authenticate(): Promise<void> {
-    if (this.apiTokens == null || this.apiTokens.expiresAt <= Date.now()) {
+    if (
+      this.apiTokens === undefined ||
+      this.apiTokens.expiresAt <= Date.now()
+    ) {
       await this.#fetchAccessToken();
     }
   }
@@ -156,8 +159,7 @@ export default class HelpScoutClient {
     subResource?: string,
     subResourceId?: string | number
   ): Promise<any> {
-    const embedQueryStr =
-      embed != null ? "?embed=" + embed.join("&embed=") : "";
+    const embedQueryStr = embed ? "?embed=" + embed.join("&embed=") : "";
 
     const subResourceUrl =
       subResource !== undefined && subResourceId !== undefined
