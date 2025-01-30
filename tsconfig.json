@@ -1,12 +1,8 @@
 {
   "include": [
     "src/**/*.ts",
-    ".eslintrc.js",
   ],
-  "exclude": [
-    // "node_modules",
-    // "test",
-  ],
+  "exclude": [],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
     /* Projects */
